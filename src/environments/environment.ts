@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  DB_API_URL: 'https://0f95535a-8550-4ad7-81b5-7e578cacd79b-bluemix.cloudant.com',
+  DB_USERNAME: '0f95535a-8550-4ad7-81b5-7e578cacd79b-bluemix',
+  DB_KEY: 'tougglyraythenteweremale',
+  DB_PASSWORD: '1f474f45d8439d8d7489d7365d2e39d4a5ced3dd',
+  DB_NAME: 'travelapp',
 };
 
 /*

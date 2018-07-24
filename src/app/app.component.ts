@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Trip, TripService } from './shared';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Travel App';
-  trips = [{title: "Trip to Rome", startDate: Date.now()}, {title: "Trip to Madrid", startDate: Date.now()}];
-  newTrip = {title: "", startDate: Date.now()};
+  newTrip: Trip = new Trip();
+  constructor(private tripService: TripService) {
+  }
 
   addTrip(trip){
-    this.trips.push(trip);
-    this.newTrip = {title: "", startDate: Date.now()}
+    this.tripService.save(this.newTrip).subscribe((result) => {
+      console.log(result);
+      this.newTrip = new Trip();
+    })
+    
   }
 }

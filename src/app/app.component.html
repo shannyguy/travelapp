@@ -1,14 +1,20 @@
 <div  id='header'>
   {{title}}
 </div>
-<div id='content'>
-  <div id='newTrip'>
-<input type='text' placeholder="Add trip title" [(ngModel)]='newTrip.title'/>
-<button (click)='addTrip(newTrip)'>Add trip</button>
-  </div>
-  <div class='trip' *ngFor='let trip of trips'> 
-    {{trip.title}}
-    <div appHighlight>{{trip.startDate | date:'fullDate'}}</div>
-  </div>
+<div class='container'>
+  <mat-tab-group>
+    <mat-tab label="My Trips">
+      <div>
+      
+      <mat-form-field>
+      <input matInput placeholder="Enter trip name..." [(ngModel)]="newTrip.title" >
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" (click)="addTrip()">Save</button>
+    </div>
+    </mat-tab>
+    <mat-tab label="Second"> Content 2 </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+  </mat-tab-group>
 </div>
 
