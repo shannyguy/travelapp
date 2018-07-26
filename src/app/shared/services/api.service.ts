@@ -33,7 +33,7 @@ export class ApiService {
 
   post(body: Object = {}): Observable<any> { 
     console.log("Trip", body, environment.DB_API_URL);
-    return this.http.post(`${environment.DB_API_URL}/travelapp/`, JSON.stringify(body), { headers: this.setHeaders() })
+    return this.http.post(`${environment.DB_API_URL}/travelapp`, JSON.stringify(body), { headers: this.setHeaders() })
         .catch(this.formatErrors);
         //.map((res:Response) => res);
   }

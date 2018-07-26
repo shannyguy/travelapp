@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  DB_API_URL: 'https://0f95535a-8550-4ad7-81b5-7e578cacd79b-bluemix.cloudant.com',
-  DB_USERNAME: '0f95535a-8550-4ad7-81b5-7e578cacd79b-bluemix',
-  DB_KEY: 'tougglyraythenteweremale',
-  DB_PASSWORD: '1f474f45d8439d8d7489d7365d2e39d4a5ced3dd',
+  DB_API_URL: 'https://76050b44-ad80-452b-b369-462d363cfa10-bluemix.cloudant.com',
+  DB_USERNAME: '76050b44-ad80-452b-b369-462d363cfa10-bluemix',
+  DB_KEY: 'toineettingshectiondescu',
+  DB_PASSWORD: '542226e3b6f54dd50d8aca53ded1a8bc53c9def3',
   DB_NAME: 'travelapp',
 };
 

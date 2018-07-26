@@ -11,7 +11,7 @@ export class AppComponent {
   constructor(private tripService: TripService) {
   }
 
-  addTrip(trip){
+  addTrip(){
     this.tripService.save(this.newTrip).subscribe((result) => {
       console.log(result);
       this.newTrip = new Trip();

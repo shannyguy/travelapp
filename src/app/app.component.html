@@ -2,19 +2,58 @@
   {{title}}
 </div>
 <div class='container'>
-  <mat-tab-group>
-    <mat-tab label="My Trips">
+  <mat-tab-group>    
+    <mat-tab id="addTrip" label="New Trip"> 
+    <div class="container"> 
       <div>
-      
-      <mat-form-field>
-      <input matInput placeholder="Enter trip name..." [(ngModel)]="newTrip.title" >
-    </mat-form-field>
-    
-    <button mat-raised-button color="primary" (click)="addTrip()">Save</button>
+      <label for="title" >Title: </label>
+      </div> 
+      <input id="title" placeholder="Enter trip name..." [(ngModel)]="newTrip.title">
+      <div>
+          <label for="location" >Location: </label>
+          </div> 
+      <input id="location" placeholder="Enter location..." [(ngModel)]="newTrip.location" >
+      <div>
+          <label for="description" >Description: </label>
+          </div> 
+         
+      <textarea id="description" placeholder="Enter description..." [(ngModel)]="newTrip.description" style="height:200px"> </textarea>
+      <label>From: </label>
+      <input type="date" [(ngModel)]="newTrip.startDate"/>
+      <label>To: </label>
+      <input type="date" [(ngModel)]="newTrip.endDate"/>
+      <input type="submit" value="save" (click)="addTrip()">
     </div>
     </mat-tab>
-    <mat-tab label="Second"> Content 2 </mat-tab>
-    <mat-tab label="Third"> Content 3 </mat-tab>
+    
+    <mat-tab id="showTrips" label="My Trips">
+      <div class="trip-container"> 
+        <div>
+        <label for="title" >Title: </label>
+        </div> 
+        <div>
+            <label for="location" >Location: </label>
+            </div> 
+        <div>
+            <label for="description" >Description: </label>
+            </div> 
+        <label>From: </label>
+        <label>To: </label>
+      </div>
+      <div class="trip-container"> 
+        <div>
+        <label for="title" >Title: </label>
+        </div> 
+        <div>
+            <label for="location" >Location: </label>
+            </div> 
+        <div>
+            <label for="description" >Description: </label>
+            </div> 
+        <label>From: </label>
+        <label>To: </label>
+      </div>
+    </mat-tab>
   </mat-tab-group>
 </div>
 
